@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toplantı Takvimi</title>
+    <style>
+        /* CSS Stilleri buraya eklenebilir */
+    </style>
+</head>
+<body>
+    <h1>Toplantı Takvimi</h1>
+    <form id="meetingForm">
+        <label for="meetingCode">Toplantı Kodu:</label>
+        <input type="text" id="meetingCode" name="meetingCode" required><br><br>
+        <label for="userName">İsim:</label>
+        <input type="text" id="userName" name="userName" required><br><br>
+        <button type="submit">Takvimi Görüntüle</button>
+    </form>
+
+    <div id="calendar" style="display: none;">
+        <!-- Takvim buraya eklenecek -->
+        <div id="calendar" style="display: none;">
+            <h2>Toplantı Takvimi</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Pazartesi</th>
+                        <th>Salı</th>
+                        <th>Çarşamba</th>
+                        <th>Perşembe</th>
+                        <th>Cuma</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00 - 10:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 12:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!-- Buraya kadar saat dilimleri eklenebilir -->
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+    <script>
+        document.getElementById("meetingForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var meetingCode = document.getElementById("meetingCode").value;
+            var userName = document.getElementById("userName").value;
+            // Burada toplantı kodunu ve kullanıcı adını kullanarak takvimi göstermek için bir işlem yapılabilir
+            // Örneğin, bir AJAX isteği gönderilebilir veya takvim içeriği dinamik olarak oluşturulabilir
+            // Ancak bu örnek sadece bir takvim div'ini gösteriyor.
+            document.getElementById("calendar").style.display = "block";
+        });
+    </script>
+</body>
+</html>
